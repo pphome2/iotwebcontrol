@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">IoTWeb Control</string>
+    <string name="default_button_text">Button</string>
+    <string name="quit_text">Quit</string>
+    <string name="settings">Settings</string>
+    <string name="developer_site">Developer site</string>
+    <string name="settings_act">Settings</string>
+    <string name="set_default">Default</string>
+    <string name="set_1">Button 1</string>
+    <string name="set_2">Button 2</string>
+    <string name="set_3">Button 3</string>
+    <string name="set_4">Button 4</string>
+    <string name="set_5">Button 5</string>
+    <string name="set_6">Button 6</string>
+    <string name="set_7">Button 7</string>
+    <string name="set_8">Button 8</string>
+    <string name="set_9">Button 9</string>
+    <string name="set_0">Button 10</string>
+    <string name="def_url">Defulat URL</string>
+    <string name="OK">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="def_string_url">https://</string>
+    <string name="URL">URL</string>
+    <string name="maintitle">IoT web control</string>
+    <string name="welcome_page">Using welcame page</string>
+    <string name="welcome_url">Welvome page URL</string>
+    <string name="other_page_url">Other page URL</string>
+    <string name="other_web_page">Other control page</string>
+    <string name="no_other_url">No set URL</string>
+
+    <!-- Preference Titles -->
+
+    <!-- Messages Preferences -->
+
+    <!-- Sync Preferences -->
+
+    <!-- Preference Titles -->
+
+    <!-- Messages Preferences -->
+
+    <!-- Sync Preferences -->
+
+</resources>

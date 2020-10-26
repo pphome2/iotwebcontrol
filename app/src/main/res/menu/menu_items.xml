@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/m_settings"
+        android:title="@string/settings" />
+    <item
+        android:id="@+id/m_otherweb"
+        android:title="@string/other_web_page" />
+    <item
+        android:id="@+id/m_dev"
+        android:title="@string/developer_site" />
+    <item
+        android:id="@+id/m_quit"
+        android:title="@string/quit_text" />
+</menu>

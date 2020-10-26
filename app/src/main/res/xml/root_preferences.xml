@@ -1,0 +1,239 @@
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="@string/set_default" >
+        <EditTextPreference
+            android:id="@+id/setdefaulturl"
+            android:key="def_url"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/OK"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/def_url"
+            android:defaultValue="@string/def_string_url"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+            android:id="@+id/welcomepage"
+            android:defaultValue="true"
+            android:key="welcome_page"
+            android:title="@string/welcome_page" />
+        <EditTextPreference
+            android:id="@+id/welcomeurl"
+            android:key="welcome_url"
+            android:title="@string/welcome_url"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/OK"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            android:id="@+id/otherurl"
+            android:key="other_page_url"
+            android:title="@string/other_page_url"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/OK"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/set_1" >
+    <EditTextPreference
+        android:id="@+id/setb_1"
+        android:key="edit_b_1"
+        android:title="@string/default_button_text"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:id="@+id/settext_1"
+        android:key="edit_url_1"
+        android:title="@string/URL"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/set_2" >
+    <EditTextPreference
+        android:id="@+id/setb_2"
+        android:key="edit_b_2"
+        android:title="@string/default_button_text"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:id="@+id/settext_2"
+        android:key="edit_url_2"
+        android:title="@string/URL"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/set_3" >
+    <EditTextPreference
+        android:id="@+id/setb_3"
+        android:key="edit_b_3"
+        android:title="@string/default_button_text"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:id="@+id/settext_3"
+        android:key="edit_url_3"
+        android:title="@string/URL"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/set_4" >
+    <EditTextPreference
+        android:id="@+id/setb_4"
+        android:key="edit_b_4"
+        android:title="@string/default_button_text"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:id="@+id/settext_4"
+        android:key="edit_url_4"
+        android:title="@string/URL"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/set_5" >
+    <EditTextPreference
+        android:id="@+id/setb_5"
+        android:key="edit_b_5"
+        android:title="@string/default_button_text"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:id="@+id/settext_5"
+        android:key="edit_url_5"
+        android:title="@string/URL"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/set_6" >
+    <EditTextPreference
+        android:id="@+id/setb_6"
+        android:key="edit_b_6"
+        android:title="@string/default_button_text"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:id="@+id/settext_6"
+        android:key="edit_url_6"
+        android:title="@string/URL"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/set_7" >
+    <EditTextPreference
+        android:id="@+id/setb_7"
+        android:key="edit_b_7"
+        android:title="@string/default_button_text"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:id="@+id/settext_7"
+        android:key="edit_url_7"
+        android:title="@string/URL"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/set_8" >
+    <EditTextPreference
+        android:id="@+id/setb_8"
+        android:key="edit_b_8"
+        android:title="@string/default_button_text"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:id="@+id/settext_8"
+        android:key="edit_url_8"
+        android:title="@string/URL"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/set_9" >
+    <EditTextPreference
+        android:id="@+id/setb_9"
+        android:key="edit_b_9"
+        android:title="@string/default_button_text"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:id="@+id/settext_9"
+        android:key="edit_url_9"
+        android:title="@string/URL"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/set_0" >
+    <EditTextPreference
+        android:id="@+id/setb_0"
+        android:key="edit_b_0"
+        android:title="@string/default_button_text"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    <EditTextPreference
+        android:id="@+id/settext_0"
+        android:key="edit_url_0"
+        android:title="@string/URL"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/OK"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

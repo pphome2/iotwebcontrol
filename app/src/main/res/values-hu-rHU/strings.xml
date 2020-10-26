@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IoTWeb Vezérlő</string>
+    <string name="default_button_text">Nyomógomb</string>
+    <string name="quit_text">Kilépés</string>
+    <string name="settings">Beállítások</string>
+    <string name="developer_site">Fejlesztő</string>
+    <string name="settings_act">Beállítások</string>
+    <string name="set_default">Általános</string>
+    <string name="set_1">Nyomógomb 1</string>
+    <string name="set_2">Nyomógomb 2</string>
+    <string name="set_3">Nyomógomb 3</string>
+    <string name="set_4">Nyomógomb 4</string>
+    <string name="set_5">Nyomógomb 5</string>
+    <string name="set_6">Nyomógomb 6</string>
+    <string name="set_7">Nyomógomb 7</string>
+    <string name="set_8">Nyomógomb 8</string>
+    <string name="set_9">Nyomógomb 9</string>
+    <string name="set_0">Nyomógomb 10</string>
+    <string name="def_url">Alapértelmezett URL</string>
+    <string name="cancel">Mégse</string>
+    <string name="OK">Mehet</string>
+    <string name="def_string_url">https://</string>
+    <string name="URL">URL</string>
+    <string name="maintitle">IoT web  vezérlő</string>
+    <string name="welcome_page">Üdvözlő oldal használata</string>
+    <string name="welcome_url">Üdvözlő oldal URL</string>
+    <string name="other_page_url">Egyéb oldal URL</string>
+    <string name="other_web_page">Másik vezérlő oldal</string>
+    <string name="no_other_url">Nincs megadva URL</string>
+</resources>
