@@ -60,11 +60,11 @@ public class OtherWebActivity extends AppCompatActivity {
             });
 
             String str = MainActivity.ourl;
-            if (str.isEmpty()){
-                Toast toast= Toast.makeText(getApplicationContext(), R.string.no_other_url,Toast.LENGTH_SHORT);
-                toast.setMargin(50,50);
+            if (str.isEmpty()) {
+                Toast toast = Toast.makeText(getApplicationContext(), R.string.no_other_url, Toast.LENGTH_SHORT);
+                toast.setMargin(50, 50);
                 toast.show();
-            } else {
+            } else{
                 myWebView.loadUrl(str);
             }
         }

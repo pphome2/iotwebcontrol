@@ -44,15 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             edt.putString("def_url", "@string/def_url");
             edt.commit();
         } else {
-            if (!str.endsWith("/")) {
-                str = str + "/";
-            }
-            if ((!str.startsWith("http://")) && (!str.startsWith("https://"))){
-                str = "https://" + str;
-            }
-            SharedPreferences.Editor edt = sp.edit();
-            edt.putString("def_url", str);
-            edt.commit();
+
         }
 
         setButton(this);
@@ -190,7 +182,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void setButton(AppCompatActivity th){
         SharedPreferences sp= PreferenceManager.getDefaultSharedPreferences(th);
-        MainActivity.ourl = sp.getString("other_page_url", "");
+        String ou = sp.getString("other_page_url", "");
+        if (!ou.isEmpty()){
+                if ((!ou.startsWith("https://")) && (!ou.startsWith("http://"))){
+                    String ou2 = sp.getString("def_url", "");
+                    MainActivity.ourl = ou2 + ou;
+                }
+            }
         String str = sp.getString("edit_b_1", "");
         String str2 = sp.getString("edit_url_1", "");
         Button mButton = (Button) th.findViewById(R.id.button1);
@@ -201,6 +199,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mButton.setVisibility(INVISIBLE);
         }
         str=sp.getString("edit_b_2", "");
+        str2 = sp.getString("edit_url_2", "");
         mButton = (Button) th.findViewById(R.id.button2);
         if ((!str.isEmpty() )&&(!str2.isEmpty())) {
             mButton.setVisibility(VISIBLE);
@@ -209,6 +208,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mButton.setVisibility(INVISIBLE);
         }
         str=sp.getString("edit_b_3", "");
+        str2 = sp.getString("edit_url_3", "");
         mButton = (Button) th.findViewById(R.id.button3);
         if ((!str.isEmpty() )&&(!str2.isEmpty())) {
             mButton.setVisibility(VISIBLE);
@@ -217,6 +217,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mButton.setVisibility(INVISIBLE);
         }
         str=sp.getString("edit_b_4", "");
+        str2 = sp.getString("edit_url_4", "");
         mButton = (Button) th.findViewById(R.id.button4);
         if ((!str.isEmpty() )&&(!str2.isEmpty())) {
             mButton.setVisibility(VISIBLE);
@@ -225,6 +226,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mButton.setVisibility(INVISIBLE);
         }
         str=sp.getString("edit_b_5", "");
+        str2 = sp.getString("edit_url_5", "");
         mButton = (Button) th.findViewById(R.id.button5);
         if ((!str.isEmpty() )&&(!str2.isEmpty())) {
             mButton.setVisibility(VISIBLE);
@@ -233,6 +235,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mButton.setVisibility(INVISIBLE);
         }
         str=sp.getString("edit_b_6", "");
+        str2 = sp.getString("edit_url_6", "");
         mButton = (Button) th.findViewById(R.id.button6);
         if ((!str.isEmpty() )&&(!str2.isEmpty())) {
             mButton.setVisibility(VISIBLE);
@@ -241,6 +244,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mButton.setVisibility(INVISIBLE);
         }
         str=sp.getString("edit_b_7", "");
+        str2 = sp.getString("edit_url_7", "");
         mButton = (Button) th.findViewById(R.id.button7);
         if ((!str.isEmpty() )&&(!str2.isEmpty())) {
             mButton.setVisibility(VISIBLE);
@@ -249,6 +253,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mButton.setVisibility(INVISIBLE);
         }
         str=sp.getString("edit_b_8", "");
+        str2 = sp.getString("edit_url_8", "");
         mButton = (Button) th.findViewById(R.id.button8);
         if ((!str.isEmpty() )&&(!str2.isEmpty())) {
             mButton.setVisibility(VISIBLE);
@@ -257,6 +262,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mButton.setVisibility(INVISIBLE);
         }
         str=sp.getString("edit_b_9", "");
+        str2 = sp.getString("edit_url_9", "");
         mButton = (Button) th.findViewById(R.id.button9);
         if ((!str.isEmpty() )&&(!str2.isEmpty())) {
             mButton.setVisibility(VISIBLE);
@@ -265,6 +271,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mButton.setVisibility(INVISIBLE);
         }
         str=sp.getString("edit_b_0", "");
+        str2 = sp.getString("edit_url_0", "");
         mButton = (Button) th.findViewById(R.id.button10);
         if ((!str.isEmpty() )&&(!str2.isEmpty())) {
             mButton.setVisibility(VISIBLE);
@@ -274,9 +281,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         WebView myWebView = (WebView) findViewById(R.id.owebv);
+        str = sp.getString("def_url", "");
+        if (!str.endsWith("/")) {
+            str2 = str + "/";
+        } else {
+            str2 = str;
+        }
+        if ((!str2.startsWith("http://")) && (!str2.startsWith("https://"))){
+            str2 = "https://" + str2;
+        }
+        if (str != str2){
+            SharedPreferences.Editor edt = sp.edit();
+            edt.putString("def_url", str2);
+            edt.commit();
+            str = sp.getString("def_url", "");
+        }
         if (sp.getBoolean("welcome_page",false)) {
             str2 = sp.getString("welcome_url", "");
-            str = sp.getString("def_url", "");
             if (str2.isEmpty()) {
                 Toast toast = Toast.makeText(getApplicationContext(), R.string.no_other_url, Toast.LENGTH_SHORT);
                 toast.setMargin(50, 50);
