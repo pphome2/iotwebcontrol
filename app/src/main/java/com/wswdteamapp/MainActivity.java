@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         webSettings.setSafeBrowsingEnabled(true);
         myWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         myWebView.setScrollbarFadingEnabled(false);
-        myWebView.setBackgroundColor(Color.parseColor("#FF018786"));
+        myWebView.setBackgroundColor(Color.parseColor("#afafaf"));
         myWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
