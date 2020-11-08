@@ -10,6 +10,7 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,6 +40,9 @@ public class WebActivity extends AppCompatActivity {
             @Override
             public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
                 super.onReceivedError(view, request, error);
+                Toast toast = Toast.makeText(getApplicationContext(), R.string.URL_error, Toast.LENGTH_SHORT);
+                toast.show();
+                view.loadUrl("about:blank");
             }
 
             @Override

@@ -28,4 +28,5 @@
     <string name="other_page_url">Egyéb oldal URL</string>
     <string name="other_web_page">Másik vezérlő oldal</string>
     <string name="no_other_url">Nincs megadva URL</string>
+    <string name="URL_error">Weboldal nem létezik</string>
 </resources>

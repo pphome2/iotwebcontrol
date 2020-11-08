@@ -12,11 +12,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
@@ -25,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public static String wurl = "https://pphome2.github.io";
     public static String ourl = "";
-    public static WebViewClient myWebView;
+    public static WebView myWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +52,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
 
         }
-
-        setButton(this);
 
         Button mButton = (Button) this.findViewById(R.id.button1);
         mButton.setOnClickListener(this);
@@ -70,19 +74,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButton = (Button) this.findViewById(R.id.button10);
         mButton.setOnClickListener(this);
 
-        WebView myWebView = (WebView) findViewById(R.id.owebv);
-        WebSettings webSettings = myWebView.getSettings();
+        MainActivity.myWebView = (WebView) findViewById(R.id.owebv);
+        WebSettings webSettings = MainActivity.myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setSafeBrowsingEnabled(true);
-        myWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
-        myWebView.setScrollbarFadingEnabled(false);
-        myWebView.setBackgroundColor(Color.parseColor("#afafaf"));
-        myWebView.setWebViewClient(new WebViewClient() {
+        MainActivity.myWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+        MainActivity.myWebView.setScrollbarFadingEnabled(false);
+        MainActivity.myWebView.setBackgroundColor(Color.parseColor("#afafaf"));
+        MainActivity.myWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
                 super.onReceivedError(view, request, error);
+                Toast toast = Toast.makeText(getApplicationContext(), R.string.URL_error, Toast.LENGTH_SHORT);
+                toast.show();
+                view.loadUrl("about:blank");
             }
         });
+        setButton(this);
     }
 
     @Override
@@ -126,7 +134,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String str2 = "";
 
         SharedPreferences sp= PreferenceManager.getDefaultSharedPreferences(this);
-        WebView myWebView = (WebView) findViewById(R.id.owebv);
         String str;
         str = sp.getString("def_url", "");
         switch (v.getId()){
@@ -171,10 +178,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (str.isEmpty()) {
             Toast toast = Toast.makeText(getApplicationContext(), R.string.no_other_url, Toast.LENGTH_SHORT);
-            toast.setMargin(50, 50);
             toast.show();
         } else {
-            myWebView.loadUrl(str);
+            MainActivity.myWebView.loadUrl(str);
         }
     }
 
@@ -280,7 +286,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mButton.setVisibility(INVISIBLE);
         }
 
-        WebView myWebView = (WebView) findViewById(R.id.owebv);
         str = sp.getString("def_url", "");
         if (!str.endsWith("/")) {
             str2 = str + "/";
@@ -300,19 +305,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             str2 = sp.getString("welcome_url", "");
             if (str2.isEmpty()) {
                 Toast toast = Toast.makeText(getApplicationContext(), R.string.no_other_url, Toast.LENGTH_SHORT);
-                toast.setMargin(50, 50);
                 toast.show();
             } else {
                 if ((!str2.startsWith("https://")) && (!str2.startsWith("http://"))){
                     str2 = str + str2;
                 }
-                Toast toast = Toast.makeText(getApplicationContext(), str2, Toast.LENGTH_SHORT);
-                toast.setMargin(50, 50);
-                toast.show();
-                myWebView.loadUrl(str2);
+                MainActivity.myWebView.loadUrl(str2);
             }
         }
     }
+
 
     public void quitApp(View v) {
         finishAndRemoveTask();

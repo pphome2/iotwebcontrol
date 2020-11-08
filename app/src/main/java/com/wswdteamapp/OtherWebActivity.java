@@ -40,6 +40,9 @@ public class OtherWebActivity extends AppCompatActivity {
                 @Override
                 public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
                     super.onReceivedError(view, request, error);
+                    Toast toast = Toast.makeText(getApplicationContext(), R.string.URL_error, Toast.LENGTH_SHORT);
+                    toast.show();
+                    view.loadUrl("about:blank");
                 }
 
                 @Override
@@ -62,7 +65,6 @@ public class OtherWebActivity extends AppCompatActivity {
             String str = MainActivity.ourl;
             if (str.isEmpty()) {
                 Toast toast = Toast.makeText(getApplicationContext(), R.string.no_other_url, Toast.LENGTH_SHORT);
-                toast.setMargin(50, 50);
                 toast.show();
             } else{
                 myWebView.loadUrl(str);
